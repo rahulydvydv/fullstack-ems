@@ -1,16 +1,67 @@
-# React + Vite
+# FullStack EMS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my Employee Management System project built using React and Vite.  
+I created this project to practice building a real-world application with features like employee management, attendance, and portals.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Admin and Employee login portal  
+- Employee management  
+- Attendance tracking  
+- Leave management  
+- Payslip section  
+- Clean and responsive UI  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (Vite)  
+- Tailwind CSS  
+- React Router DOM  
+- Lucide Icons  
+
+---
+
+## How to run this project
+
+1. Clone the repo:
+git clone https://github.com/rahulydvydv/fullstack-ems.git
+
+2. Go to the client folder:
+cd client
+
+3. Install dependencies:
+npm install
+
+4. Start the project:
+npm run dev
+
+---
+
+## About this project
+
+I built this project to improve my frontend skills and understand how real applications are structured.  
+I am planning to add backend and authentication in the future.
+
+---
+
+## Future plans
+
+- Add backend (Node.js + MongoDB)  
+- Add authentication (JWT)  
+- Improve UI and dashboard  
+- Make it fully functional  
+
+---
+
+## Author
+
+Rahul Yadav  
+https://github.com/rahulydvydv
+
+---
+
+If you like this project, feel free to give it a star ⭐
