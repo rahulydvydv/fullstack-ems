@@ -21,7 +21,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     const dummyProfileData = {
-      firstName: "Rahul",
+      firstName: "XYZ",
       lastName: "Yadav",
     };
     setUserName(
@@ -33,11 +33,11 @@ const Sidebar = () => {
     setMobileOpen(false);
   }, [pathname]);
 
-  const role = "ADMIN" || "Employee";
+  const role = "Admin" || "Employee";
 
   const navItems = [
     { name: "Dashboard", href: "/dashboard", icon: LayoutGridIcon },
-    role === "ADMIN"
+    role === "Admin"
       ? { name: "Employees", href: "/employees", icon: UserIcon }
       : { name: "Attendance", href: "/attendance", icon: CalendarIcon },
     { name: "Leave", href: "/leave", icon: FileTextIcon },
@@ -87,7 +87,7 @@ const Sidebar = () => {
             <div>
               <p className="text-sm text-slate-200">{userName}</p>
               <p className="text-xs text-slate-400">
-                {role === "ADMIN" ? "Admin" : "Employee"}
+                {role === "Admin" ? "Admin" : "Employee"}
               </p>
             </div>
           </div>

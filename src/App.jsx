@@ -2,7 +2,7 @@ import { Toaster } from "react-hot-toast"
 import { Route, Routes , Navigate , } from "react-router-dom"
 import Layout from "./pages/Layout"
 import Login from "./pages/Login"
-import Addendance from "./pages/Addendance"
+import Attendance from "./pages/Attendance"
 import Leave from "./pages/Leave"
 import Settings from "./pages/Settings"
 import Payslips from "./pages/Payslips"
@@ -17,12 +17,12 @@ const App = () => {
       <Toaster />
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/login/admin" element={<Loginform roll="adimi" tittle="Admin Portal"  subtitle="Sign in to manage the organization" />} />
-        <Route path="/login/employee" element={<Loginform role="employee" tittle="Employee Portal"  subtitle="Sign in  to access your account" />} />
+        <Route path="/login/admin" element={<Loginform roll="Admin" tittle="ADMIN Portal"  subtitle="Sign in to manage the organization" />} />
+        <Route path="/login/employee" element={<Loginform role="Empoyee" tittle="Employee Portal"  subtitle="Sign in  to access your account" />} />
         <Route element={<Layout />}>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/employees" element={<Employees />} />
-          <Route path="/attendance" element={<Addendance />} />
+          <Route path="/attendance" element={<Attendance />} />
           <Route path="/leave" element={<Leave/>} />
           <Route path="/payslips" element={<Payslips/>} />
           <Route path = "/settings" element = {<Settings/>} />
