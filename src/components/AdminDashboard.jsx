@@ -33,7 +33,7 @@ const AdminDashboard = ({ data }) => {
             <div className='page-header'>
                 <h1 className='page-title'>Dashboard</h1>
                 <p className='page-subtitle'>
-                    Welcome back,Admin --here's your overview
+                    Welcome back , Admin --here's your overview
                 </p>
             </div>
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-8'>
