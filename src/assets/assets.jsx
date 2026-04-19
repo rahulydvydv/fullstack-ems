@@ -80,3 +80,14 @@ export const dummyAdminData = {
     }
   ]
 }
+
+export const getDayTypeDisplay = (status) => {
+  const map = {
+    PRESENT: "Work Day",
+    LATE: "Late Arrival",
+    ABSENT: "Absent",
+    "ON LEAVE": "Leave"
+  };
+
+  return map[String(status).toUpperCase()] || "-";
+};

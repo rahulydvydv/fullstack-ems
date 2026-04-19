@@ -1,9 +1,47 @@
+import { useCallback, useEffect, useState } from "react"
+import { dummyAttendanceData } from "../assets/dummyattendanceData"
+import Loading from "../components/Loading"
+import CheakInButton from "../components/attendance/CheckedInButton"
+import AttendanceStats from "../components/attendance/AttendanceStats"
+import Attendancehistory from "../components/attendance/Attendancehistory"
 
+const Attendance = () => {
+  const [history , setHistory] = useState([])
+  const [loading , setLoading] = useState(true)
+  const [isDeleted, setIsDeleted] = useState(false)
+  const fetchData = useCallback(async()=>{
+    setHistory(dummyAttendanceData)
+    setTimeout(()=>{
+      setLoading(false)
+    },1000)
+  },[])
 
-const Addendance = () => {
-  return (
-    <div>Addendance</div>
+  useEffect(()=>{
+    fetchData()
+  },[fetchData]);
+  if(loading) return <Loading/>
+  const today = new Date()
+  today.setHours(0,0,0,0)
+  const todayrecord = history.find((r)=> new Date(r.date).toDateString()===today.toDateString())
+  return (  
+    <div className="animate-fade-in">
+      <div className="page-header">
+        <h1 className="text-3xl font-bold ">Attendance</h1>
+        <p className="page-subtitle">Track your work hours and daily check-in</p>
+      </div>
+      {isDeleted ? (
+        <div className="mb-8 p-6 bg-rose-50 border border-rose-200 rounded-2xl text-center">
+          <p className="text-rose-600">You can no longer clock in or out because your employee records have been marks as deleted.</p>
+       </div>
+      ):(
+        <div className=" mt-4 font-medium ">
+          <CheakInButton todayRecord={todayrecord} onAction={fetchData}/>
+        </div>
+      )}
+     <AttendanceStats history={history} />
+     <Attendancehistory history={history} />
+    </div>
   )
 }
 
-export default Addendance
+export default Attendance
