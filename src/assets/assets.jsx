@@ -47,6 +47,39 @@ export const dummyEmployeeData = [
   }
 ]
 // Admin Dashboard Dummy Data
+  // Dummy Leave Data
+  export const dummyLeaveData = [
+    {
+      id: 1,
+      employeeId: 2,
+      name: "Vidhayak Yadav",
+      type: "Sick Leave",
+      startDate: "2026-04-10",
+      endDate: "2026-04-12",
+      status: "Approved",
+      reason: "Fever and cold"
+    },
+    {
+      id: 2,
+      employeeId: 3,
+      name: "Sansad Yadav",
+      type: "Casual Leave",
+      startDate: "2026-04-15",
+      endDate: "2026-04-16",
+      status: "Pending",
+      reason: "Personal work"
+    },
+    {
+      id: 3,
+      employeeId: 4,
+      name: "MukhyaMantri Sharma",
+      type: "Earned Leave",
+      startDate: "2026-04-18",
+      endDate: "2026-04-20",
+      status: "Rejected",
+      reason: "Insufficient leave balance"
+    }
+  ];
 
 export const dummyAdminData = {
   role: "Admin",

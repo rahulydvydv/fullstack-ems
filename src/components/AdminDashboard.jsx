@@ -7,25 +7,25 @@ const AdminDashboard = ({ data }) => {
             icon: UsersIcon,
             value: data.currentMonthAttendance,
             label: "total employee",
-            discription: "active workforce",
+            description: "active workforce",
         },
         {
             icon: Building2Icon,
             value: data.totalDepartment,
             label: "Department",
-            discription: "Organization Units",
+            description: "Organization Units",
         },
         {
             icon: Calendar1Icon,
             value: data.todayAttendance,
             label: "Today's Attendance",
-            discription: "Cheaked in today ",
+            description: "Cheaked in today ",
         },
         {
             icon: FileTextIcon,
             value: data.pendingLeaves,
             label: "Pending Leaves",
-            discription: "Awaiting approval",
+            description: "Awaiting approval",
         },
     ]
     return (
